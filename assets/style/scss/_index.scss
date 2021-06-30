@@ -1,0 +1,45 @@
+footer {
+  height: 80px;
+  background: $brown;
+  .left-link {
+    display: flex;
+    li a{
+      color: #fff;
+      font-size: 20px;
+      margin-left: 2.25rem;
+    }
+  }
+}
+
+.banner {
+  height: 870px;
+  background-image: url("../../image/index1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;   
+}
+
+.banner {
+  &__content {
+    color: white;
+    .title {
+      font-size: 40px;
+    }
+  }
+}
+
+.center {}
+
+.productHotsale {
+  background: #E0E0E0;
+}
+
+.bannerBottom {
+  background-image: url("../../image/index10.jpg");
+  height: 600px;
+  display: flex;
+  align-items: flex-end;
+  color: $gray;
+  padding-bottom: 112px;
+  // margin-bottom: 112px;
+}

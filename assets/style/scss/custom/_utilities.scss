@@ -1,0 +1,53 @@
+@import '../bootstrap/utilities';
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$spacers: map-merge($spacers, $custom-spacers);
+
+$utilities: (
+  "font-family": (
+    property: font-family,
+    class: font,
+    values: (
+      noto-sans: $font-family-noto-sans,
+      baloo-tamma-2: $font-family-baloo-tamma-2,
+    )
+  ),
+  "letter-spacing": (
+    property: letter-spacing,
+    class: tracking,
+    values: (
+      1: .04375rem,
+      2: .125rem,
+      3: .1875rem,
+    )
+  ),
+  "icon-size": (
+    responsive: true,
+    property: width height,
+    class: icon-size,
+    values: (
+      1: 20px,
+      2: 24px,
+      3: 30px,
+    )
+  ),
+  "font-size": map-merge(
+    map-get($utilities, "font-size"),
+    (
+      responsive: true,
+      values: map-merge(
+        map-get(map-get($utilities, "font-size"), "values"),
+        $custom-font-sizes,
+      )
+    )
+  ),
+  "rounded": map-merge(
+    map-get($utilities, "rounded"),
+    (
+      values: map-merge(
+        map-get(map-get($utilities, "rounded"), "values"),
+        (4: .5rem),
+      )
+    )  
+  )
+);
+
